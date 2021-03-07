@@ -1,3 +1,4 @@
 STM32/Debug/*
 STM32/Release/*
 SimHub/.vs/*
+SimHub/obj/*
