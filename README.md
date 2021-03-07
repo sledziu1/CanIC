@@ -5,6 +5,17 @@
 
 # Hardware
 
+## Instrument cluster
+Mitsubishi RVR platform cluster:
+- Lancer X / VIII 2008+
+- Outladner
+- ASX
+- Outlander II
+
+Part number:
+
+8100B127A or similar
+
 ## Microcontroller (Bluepill/STM32F103C8T6)
 ![stm](https://stm32duinoforum.com/forum/images/thumb/1/19/STM32_Blue_Pill_top-jpg/wiki_subdomain/700px-STM32_Blue_Pill_top.jpg)
 ## CAN (MCP2515 + TJA1050)
@@ -18,7 +29,7 @@ https://github.com/sledziu1/CanIC/tree/master/img/
 # Cluester pinout
 Image: http://mmc-manuals.ru/manuals/lancer_x/online/Service_Manual/img/54/AC606907AE00ENG.pdf
 
-Descritpion: http://mmc-manuals.ru/manuals/lancer_x/online/Service_Manual/2008/54/html/M154020120021700ENG.HTM
+Description: http://mmc-manuals.ru/manuals/lancer_x/online/Service_Manual/2008/54/html/M154020120021700ENG.HTM
 
 # Used libs
 https://github.com/eziya/STM32_SPI_MCP2515
