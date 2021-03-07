@@ -1,0 +1,61 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CanIC"
+        xmlns:styles="clr-namespace:SimHub.Plugins.Styles;assembly=SimHub.Plugins" xmlns:Custom="http://metro.mahapps.com/winfx/xaml/controls" x:Class="CanIC.SettingsControlDemo"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="400" MinHeight="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="110"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <styles:SHSection Title="Status">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="label1" Content="Label" Grid.Row="1" Foreground="Black" Grid.Column="1" FontWeight="Bold"/>
+                    <Label Content="Connection" Grid.Row="1" Foreground="Black" Grid.Column="0"/>
+                </Grid>
+            </styles:SHSection>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <styles:SHSection Title="Options">
+                <StackPanel Orientation="Vertical">
+                    <CheckBox x:Name="checkboxGearPrefix" Content="Show gear prefix D" Margin="0,0,128,0" Foreground="Black" RenderTransformOrigin="1.034,1.734" Checked="CheckboxGearPrefix_Checked" Unchecked="CheckboxGearPrefix_Checked" Background="White" BorderBrush="#FF7A7A7A"/>
+                    <CheckBox x:Name="checkboxEnableInGame" Content="Enable in game only" Margin="0,0,128,0" Foreground="Black" RenderTransformOrigin="1.034,1.734" Checked="CheckboxEnableInGame_Checked" Unchecked="CheckboxEnableInGame_Checked" Background="White" BorderBrush="#FF7A7A7A"/>
+                </StackPanel>
+            </styles:SHSection>
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <styles:SHSection Title="Interaction">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <!--<Button Content="Button" HorizontalAlignment="Left" Width="75"/>-->
+                        <styles:SHButtonPrimary Content="Click" HorizontalAlignment="Left" Width="75" Click="SHButtonPrimary_Click_1"/>
+                        <styles:SHButtonPrimary Content="Long click" HorizontalAlignment="Left" Width="96" Click="SHButtonPrimary_Click_2"/>
+                        <styles:SHButtonPrimary Content="Test" HorizontalAlignment="Left" Width="75" Click="SHButtonPrimary_Click_3"/>
+                    </StackPanel>
+                    <CheckBox x:Name="checkboxHandbrake" Content="Force Handbrake" Foreground="Black" RenderTransformOrigin="1.034,1.734" Checked="CheckboxHandbrake_Checked" Unchecked="CheckboxHandbrake_Unchecked" Background="White" BorderBrush="#FF7A7A7A"/>
+                </StackPanel>
+            </styles:SHSection>
+        </StackPanel>
+        <DataGrid x:Name="datagr" Margin="10" Grid.Row="3" AutoGenerateColumns="False" CanUserSortColumns="False" RowEditEnding="Datagr_RowEditEnding" GridLinesVisibility="All">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding name}" Header="Light" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding property, UpdateSourceTrigger=PropertyChanged}" Header="Parameter"/>
+                <DataGridTextColumn Binding="{Binding compareValue, UpdateSourceTrigger=PropertyChanged}"  Header="Enable value"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>
