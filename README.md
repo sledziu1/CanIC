@@ -13,10 +13,11 @@
 
 ## Schematic
 Data lost. Needs to be reverse engineered from images.
-https://github.com/sledziu1/CanIC/img/
+https://github.com/sledziu1/CanIC/tree/master/img/
 
 # Cluester pinout
 Image: http://mmc-manuals.ru/manuals/lancer_x/online/Service_Manual/img/54/AC606907AE00ENG.pdf
+
 Descritpion: http://mmc-manuals.ru/manuals/lancer_x/online/Service_Manual/2008/54/html/M154020120021700ENG.HTM
 
 # Used libs
